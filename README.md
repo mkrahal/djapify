@@ -35,7 +35,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 * Clone the repository 
 	
-```git clone https://github.com/mkrahal/djapify```
+	```git clone https://github.com/mkrahal/djapify```
 
 1. Install rabbitmq and its dependencies
 	$sudo apt-get install -y erlang
