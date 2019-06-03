@@ -78,7 +78,7 @@ These instructions will get you a copy of the project up and running on your loc
 	```
 	$python manage.py runserver
 	```
-	*NOTE: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
+	*Note: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
 
 ## Deployment
 
