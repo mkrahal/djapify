@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'dashboard',
     'installer',
-    'gdpr',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +52,6 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    # 'django.middleware.clickjacking.XFrameOptionsMiddleware',          # Commented out because it prevents pages being loading in an <iframe>, meaning your app pages will not be displayed embedded in the Shopify admin.
     'installer.middleware.LoginProtectionMiddleware',     # Added 'context_processor' located in the 'installer' directory
     'installer.middleware.corsMiddleware',      # Added the 'CORS middleware' located in the 'installer' directory
 ]
@@ -135,7 +133,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Other Django configurations...
 # Celery application definition
-# http://docs.celeryproject.org/en/v4.0.2/userguide/configuration.html
 CELERY_BROKER_URL = 'amqp://localhost'
 CELERY_RESULT_BACKEND = 'amqp://localhost'
 CELERY_ACCEPT_CONTENT = ['application/json']
@@ -143,23 +140,13 @@ CELERY_RESULT_SERIALIZER = 'json'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = 'UTC'
 
-# Note if celery is not sync with server time, change the TIMEZONE value above google 'pytz timezone list' for a list of values
 CELERY_BEAT_SCHEDULE = {
-     'newly_regestered_data': {
-         'task': 'gdpr.tasks.newly_regestered_data',
-         'schedule': crontab(minute=51, hour=00),
-         'args': ()
-     },
      'check_recurring_charge': {
          'task': 'installer.tasks.check_recurring_charge',
          'schedule': crontab(minute=0, hour=5),
          'args': ()
-     },
-     'removal_queue_processing': {
-         'task': 'gdpr.tasks.removal_queue_processing',
-         'schedule': crontab(minute=34, hour=0),
-         'args': ()
      }
+     
  }
 
 

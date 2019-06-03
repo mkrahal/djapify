@@ -57,7 +57,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 5. Install the libraries listed in requirements.txt using pip
 	```
-	$ pip install -r info/requirements.txt
+	$ pip install -r djapify/extras/requirements.txt
 	```
 
 6. Register your app in shopify's partner backend, get your API_KEY and SECRET and register you redirect_url (white listed url)
@@ -74,11 +74,14 @@ These instructions will get you a copy of the project up and running on your loc
 	$ python manage.py loaddata dashboard/fixtures/default_styles_fixture.json
 	```
 
-10. Run your django server
+10. Start all services and run app
 	```
-	$python manage.py runserver
+	$ sudo supervisorctl restart shopify_scaffolding_beat
+	$ sudo supervisorctl restart shopify_scaffolding
+	$ sudo systemctl start rabbitmq-server
+	$ python manage.py runserver
 	```
-	*Note: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
+	*Note: Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
 
 ## Deployment
 

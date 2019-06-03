@@ -1,1 +1,0 @@
-SELECT * FROM tesddevstore_myshopify_com  WHERE date BETWEEN '2001-01-01' AND '2018-03-25' INTO OUTFILE '/home/zboqbtF6s5z0YNBJYNSj8YSzi61/shopifydev/shopifydev/exportfiledump/tesddevstore.csv' FIELDS TERMINATED BY ',' ENCLOSED BY '' LINES TERMINATED BY '\n';

@@ -1,1 +1,0 @@
-SELECT COUNT('event_id') FROM gdpr360demostore_myshopify_com;
