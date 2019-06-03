@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-from shopify_settings import *
+from app_settings import *
 
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 

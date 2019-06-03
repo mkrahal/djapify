@@ -9,7 +9,7 @@ from dashboard.models import TemplateDefaults, ModalCustomizations
 from installer.models import ShopDeatz, InstallTracker
 import hashlib, base64, hmac, json, datetime, dashboard, shopify, string, random
 
-# APP_NAME, APP_PRICE etc... are defined in shopify_settings.py
+# APP_NAME, APP_PRICE etc... are defined in app_settings.py
 
 
 def _return_address(request):

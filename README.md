@@ -62,7 +62,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 6. Register your app in shopify's partner backend, get your API_KEY and SECRET and register you redirect_url (white listed url)
 
-7. Enter your API_KEY, SECRET, and redirect_url in shopify_settings.py 
+7. Enter your API_KEY, SECRET, and redirect_url in app_settings.py 
 
 8. Make migrations in django to create your tables from your predefined models using:
    	```
