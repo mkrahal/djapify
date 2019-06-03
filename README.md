@@ -1,20 +1,19 @@
-# DJANGO Shopify App Framework
+# DJAPIFY - Shopify App Development Framework
 
-A shopify app development framework for Python and Django.
+Djapify is a shopify app development framework for Python and Django.
 
 This framework is made to be used as a functional starting point for the development of shopify apps, with all the necessary low-level structures pre-coded. 
 
 Pre-coded Features:
 
-The Engine provides a SessionsController and all the required code for authenticating with a shop via Oauth (other authentication methods are not supported).
--  App Installation (create sessions and request shop access token for future usage when making api calls to the store)
--  Wehook registration (recieve uninstallation notices when merchant removes the app)
+-  App Installation (authenticate with merchant store using Oauth, create sessions, and request access tokens to make api calls to the store)
+-  Webhook registration (recieve uninstallation notices when merchant removes the app)
 -  Script tag registration (inject html / css / javascript in order to manipulate storefront) 
 -  Embedded App SDK  (use shopify's SDK to embed apps directly in the merchant admin section and provide access to native admin GUI features)
 -  Support for handling Cross Origin Requests via a CORS specific middleware
 -  Create application charges and activate recurring charges
 -  Request permissions for application scope
--  HMAC validation
+-  HMAC validation (create and manage sessions using HMAC validation)
 -  Gracefully fallback when user declines recurring charge
 -  Celery task to periodically check if recurring charge is still active (if not store is deleted from app server "Registered Store" Database and     app service is no longer provided)
 
@@ -26,13 +25,16 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
+* Python 2.7
+* Django
+* Rabbit-mq
+* Supervisor
+* For a complete list of required python libraries see [requirement.txt]()
 
 ### Installing
+
+* Clone the repository: 
+	```git clone https://github.com/mkrahal/djapify```
 
 1. Install rabbitmq and its dependencies
 	$sudo apt-get install -y erlang
@@ -65,7 +67,6 @@ Give examples
 	$python manage.py runserver
 	NOTE: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
 
-
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
@@ -76,29 +77,10 @@ Add additional notes about how to deploy this on a live system
 * [DJANGO 1.11](https://www.djangoproject.com/)
 * [SHOPIFY Python API](https://github.com/Shopify/shopify_python_api)
 
-
 ## Contributing
 
 Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-### Prerequisites
-
-* Python 2.7
-* Django
-* Rabbit-mq
-* Supervisor
-* For a complete list of required python libraries see [requirement.txt]()
-
-### Installing
-
-Options to install the YCLIE module:
-
-* Clone the repository: git clone https://github.com/mkrahal/YCLIE
-* Download the zip: https://github.com/mkrahal/YCLIE
 
 ## Built With
 
