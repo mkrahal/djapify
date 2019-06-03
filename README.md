@@ -33,40 +33,52 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-* Clone the repository 
-	
-	```$ git clone https://github.com/mkrahal/djapify```
+1. Clone the repository 
+	```
+	$ git clone https://github.com/mkrahal/djapify
+	```
 
-1. Install rabbitmq and its dependencies
-	```$ sudo apt-get install -y erlang
-	$ sudo apt-get install rabbitmq-server```
+2. Install rabbitmq and its dependencies
+	```
+	$ sudo apt-get install -y erlang
+	$ sudo apt-get install rabbitmq-server
+	```
 
-2. Enable rabbitmq to start on boot
-	$sudo systemctl enable rabbitmq-server
-	$sudo systemctl start rabbitmq-server 
+3. Enable rabbitmq to start on boot
+	```
+	$ sudo systemctl enable rabbitmq-server
+	$ sudo systemctl start rabbitmq-server 
+	```
 
-3. Install supervisor to run celery cronjobs as daemons (in background)
+4. Install supervisor to run celery cronjobs as daemons (in background)
+	```
 	$ sudo apt-get install supervisor
+	```
 
-4. Install the libraries listed in requirements.txt using pip
-	$pip install -r info/requirements.txt
+5. Install the libraries listed in requirements.txt using pip
+	```
+	$ pip install -r info/requirements.txt
+	```
 
-5. Register your app in shopify's partner backend, get your API_KEY and SECRET and register you redirect_url (white listed url)
+6. Register your app in shopify's partner backend, get your API_KEY and SECRET and register you redirect_url (white listed url)
 
-6. Enter your API_KEY, SECRET, and redirect_url in shopify_settings.py 
+7. Enter your API_KEY, SECRET, and redirect_url in shopify_settings.py 
 
-7. Make migrations in django to create your tables from your predefined models using:
-   
+8. Make migrations in django to create your tables from your predefined models using:
+   	```
 	$ python manage.py makemigrations
 	$ python manage.py migrate 
+	```
+9. Run fixtures to load data
+	```
+	$ python manage.py loaddata dashboard/fixtures/default_styles_fixture.json
+	```
 
-8. Run Fixtures using $ python manage.py loaddata <fixturename> 
-    in this case: 
-    $ python manage.py loaddata dashboard/fixtures/default_styles_fixture.json
-
-9. Run your django server
+10. Run your django server
+	```
 	$python manage.py runserver
-	NOTE: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
+	```
+	*NOTE: This is only for testing! Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
 
 ## Deployment
 
