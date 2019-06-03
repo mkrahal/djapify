@@ -9,7 +9,7 @@ Pre-coded Features:
 -  App Installation (authenticate with merchant store using Oauth, create sessions, and request access tokens to make api calls to the store)
 -  Webhook registration (recieve uninstallation notices when merchant removes the app)
 -  Script tag registration (inject html / css / javascript in order to manipulate storefront) 
--  Embedded App SDK  (use shopify's SDK to embed apps directly in the merchant admin section and provide access to native admin GUI features)
+-  Embedded App SDK support (use shopify's SDK to embed apps directly in the merchant admin section and provide access to native admin GUI features)
 -  Support for handling Cross Origin Requests via a CORS specific middleware
 -  Create application charges and activate recurring charges
 -  Request permissions for application scope
