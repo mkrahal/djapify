@@ -1,0 +1,1 @@
+UPDATE jerrysjerseystore_myshopify_com SET date='2018-04-20 00:00:00', event_type='Data Removal Request Queued', legal_basis='Public Interest', purpose='zzzzzzzzzzzz', comment='zzzzzzzzzz', status='on' WHERE event_id='2' ;

@@ -1,0 +1,1 @@
+SELECT COUNT('event_id') FROM jerrysjerseystore_myshopify_com;

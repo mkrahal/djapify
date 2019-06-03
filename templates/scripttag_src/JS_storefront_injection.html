@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
+</head>
+<body>
+	<!-- Start Modal HTML Code--> 
+	<h1>Basic Modal</h1>
+
+
+	<script type="text/javascript">
+		/* The Modal (background) */
+
+		// Create a New StyleSheet 
+	  var sheet = (function() {
+	    // Create the <style> tag
+	    var style = document.createElement("style");
+
+	    // WebKit magic
+	    style.appendChild(document.createTextNode(""));
+
+	    // Add the <style> element to the page
+	    document.head.appendChild(style);
+
+	    return style.sheet;
+	  })();
+
+	/**************************************************************************************************/
+	/** MOBILE CSS **/
+	sheet.insertRule("@media only screen and (max-device-width: 580px){.MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebtn {background-color: #ffffff; height: 60px; width: 60px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: absolute; z-index: 9999; cursor:pointer;} .MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebuttonlogo{font-size: 35px !important; color: #73879C!important;} .MYEXAMPLEAPPruzcv2wa66consenttext{font-size: 35px; position: relative; padding: 15px; text-align: center;} .MYEXAMPLEAPPruzcv2wa66consenttext p{font-weight: 400;} .MYEXAMPLEAPPruzcv2wa66modal-content-datareq {padding: 2rem; width: 92%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 9999; top: 50%; left: 50%; padding: 0px 0px 15px; background: #fff; background-clip: padding-box; border: 1px solid #999; border: 1px solid rgba(0, 0, 0, .2); border-radius: 6px; outline: 0; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5); box-shadow: 0 3px 9px rgba(0, 0, 0, .5); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%)} .MYEXAMPLEAPPruzcv2wa66modal-title{font-size: 40px; font-weight: 500; margin-top: 0px; margin-bottom: 0px; line-height: 1.1; padding: 0px; margin: 0px; padding: 0px; line-height: 1.42857143; text-align: center;  font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif;} .MYEXAMPLEAPPruzcv2wa66firstpartnersscrolltabletopline{color: #73879C; width: 100%; font-size: 35px; font-weight: 500; border-bottom: 1px solid #ddd;} .MYEXAMPLEAPPruzcv2wa66partnersscrolltabletopline{color: #73879C; width: 100%; font-size: 35px; font-weight: 500; border-bottom: 1px solid #ddd; padding-top: 10px;} .MYEXAMPLEAPPruzcv2wa66consentpartners{font-size: 35px;} .MYEXAMPLEAPPruzcv2wa66partnersscrollbar{display: block; /*switch to none to hide*/ width: 90%; height: 300px; overflow-y: scroll; position: relative; margin: 10px auto; /*border: 2px solid #22437c !important;*/ border-radius: 7px;} .MYEXAMPLEAPPruzcv2wa66form-control {height: 75px; font-size: 35px;} .MYEXAMPLEAPPruzcv2wa66form-control-feedback {height: 75px;width: 55px;} .MYEXAMPLEAPPruzcv2wa66form-control.MYEXAMPLEAPPruzcv2wa66has-feedback-left {padding-left: 70px;} .MYEXAMPLEAPPruzcv2wa66button1x{font-size: 35px;} .MYEXAMPLEAPPruzcv2wa66tooltiptext {font-size: 35px; margin-bottom: 75px;} .MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebtn {font-size: 35px;} .MYEXAMPLEAPPruzcv2wa66has-feedback{margin-bottom: 35px; margin-top: 30px; width: 80%; float: none; margin-left: 10%; margin-right: 10%;} .MYEXAMPLEAPPruzcv2wa66emailicon{margin-top: 20px; color: #73879C;} .MYEXAMPLEAPPruzcv2wa66consenttext p{ color: #73879C; font-family: 'Helvetica Neue','Roboto','Arial','Droid Sans', sans-serif; font-size: 35px; font-weight: 400; line-height: 1.471;} .MYEXAMPLEAPPruzcv2wa66modal-content-datareq label {display: inline-block; margin: 0 0 -1px; padding: 15px 25px; font-weight: 600; text-align: center; color: #bbb; border: 1px solid transparent; font-family: 'Helvetica Neue','Roboto','Arial','Droid Sans', sans-serif; font-size: 35px; line-height: 1.471; }}", 0);
+
+
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal {display: block; /* Hidden by default */ position: fixed; /* Stay in place */ z-index: 9998; left: 0; top: 0; width: 100%; /* Full width */ height: 100%; /* Full height */ overflow: auto; /* Enable scroll if needed */ background-color: rgb(0,0,0); /* Fallback color */ background-color: rgba(0,0,0,0.4); /* Black w/ opacity */}", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-header {padding: 15px; /*border-bottom: 1px solid #e5e5e5;*/ }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-header .MYEXAMPLEAPPruzcv2wa66close {margin-top: -2px;}", 0);
+
+	sheet.insertRule("button.MYEXAMPLEAPPruzcv2wa66close {-webkit-appearance: none; padding: 0; cursor: pointer; background: 0 0; border: 0; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66close {float: right; font-size: 21px; font-weight: 700; line-height: 1; color: #000; text-shadow: 0 1px 0 #fff; filter: alpha(opacity=20); opacity: .2; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-title{ font-size: 16px; font-weight: 500; margin-top: 0px; margin-bottom: 0px; line-height: 1.1; padding: 0px; margin: 0px; padding: 0px; line-height: 1.42857143; text-align: center; font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif; color: #73879C;}", 0);
+
+	/*Link to Request*/
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebtn {background-color: #ffffff; height: 30px; width: 30px; margin-left: 5px; margin-bottom: 5px; left: 0; bottom: 0; border-radius: 50%; border: 0px; position: absolute; z-index: 9999; cursor:pointer; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebuttonlogo{font-size: 24px !important; color: #73879C	 !important; }", 0);
+
+	/*****************************/
+	/*TOOLTIP*/
+	/* Tooltip text */
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66tooltiptext {visibility: visible; /*width: 120px;*/ background-color: #fff; color: #73879C; text-align: center; padding: 5px 10px; border-radius: 6px; /* Position the tooltip text - see examples below! */ position: absolute; z-index: 9999; left: 0; bottom: 0; margin-left: 5px; margin-bottom: 45px; font-size: 13px; font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif; }", 0);
+
+	/* Show the tooltip text when you mouse over the tooltip container */
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66tooltiptext {visibility: visible; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66tooltiptext::after {content: ' '; position: absolute; top: 100%; /* At the bottom of the tooltip */ left: 10%; margin-left: -5px; border-width: 5px; border-style: solid; border-color: #fff transparent transparent transparent; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66infoicon{margin-right: 5px; }", 0);
+
+	/*DATA REQUEST CSS*/
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq {padding: 2rem; width: 50%; /* Could be more or less, depending on screen size */ position: absolute; z-index: 9999; top: 50%; left: 50%; width: 300px; padding: 0px 0px 15px; background: #fff; background-clip: padding-box; border: 1px solid #999; border: 1px solid rgba(0, 0, 0, .2); border-radius: 6px; outline: 0; -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, .5); box-shadow: 0 3px 9px rgba(0, 0, 0, .5); -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform: translate(-50%, -50%); transform: translate(-50%, -50%) }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66consenttext{ position: relative; padding: 15px; text-align: center; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66consenttext p{ color: #73879C; font-family: 'Helvetica Neue','Roboto','Arial','Droid Sans', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.471;}", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66requesttext{ margin-top: 10px; }", 0);
+
+	/* TABS*/
+
+	sheet.insertRule("*, *:before, *:after {margin: 0; padding: 0; box-sizing: border-box; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq section {display: none; padding: 20px 0 0; border-top: 1px solid #ddd; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66tabwrapper input {display: none; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label {display: inline-block; margin: 0 0 -1px; padding: 15px 25px; font-weight: 600; text-align: center; color: #bbb; border: 1px solid transparent; font-family: 'Helvetica Neue','Roboto','Arial','Droid Sans', sans-serif; font-size: 13px; line-height: 1.471; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label:before {font-family: 'fontawesome'; font-weight: normal; margin-right: 10px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label[for*='1']:before { content: \'\\f1b3\'; }", 0);
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label[for*='3']:before { content: \'\\f12d\'; }", 0);
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label[for*='4']:before { content: \'\\f074\'; }", 0);
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label[for*='2']:before { content: \'\\f085\'; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq label:hover {color: #888; cursor: pointer; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66modal-content-datareq input:checked + label {color: #555; border: 1px solid #fff; border-bottom: 2px solid #73879C; border-top: 2px solid #73879C; }", 0);
+
+	sheet.insertRule("#MYEXAMPLEAPPruzcv2wa66-tab1:checked ~ #MYEXAMPLEAPPruzcv2wa66-content1, #MYEXAMPLEAPPruzcv2wa66-tab2:checked ~ #MYEXAMPLEAPPruzcv2wa66-content2, #MYEXAMPLEAPPruzcv2wa66-tab3:checked ~ #MYEXAMPLEAPPruzcv2wa66-content3, #MYEXAMPLEAPPruzcv2wa66-tab4:checked ~ #MYEXAMPLEAPPruzcv2wa66-content4 {display: block; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-control.MYEXAMPLEAPPruzcv2wa66has-feedback-left {padding-left: 45px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66has-feedback{margin-top: 15px; position: relative; min-height: 1px; float: left; padding-right: 10px; padding-left: 10px; width: 100%; margin-bottom: 15px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-control {display: block; width: 100%; height: 34px; padding: 6px 12px; font-size: 13px; line-height: 1.4857143; color: #555; background-color: #fff; background-image: none; border: 1px solid #ccc; border-radius: 4px; -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075); box-shadow: inset 0 1px 1px rgba(0,0,0,.075); -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s; -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-control-feedback {position: absolute; top: 0; right: 0; z-index: 9999; display: block; width: 34px; height: 34px; line-height: 34px; text-align: center; pointer-events: none; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-horizontal .MYEXAMPLEAPPruzcv2wa66has-feedback .MYEXAMPLEAPPruzcv2wa66form-control-feedback {right: 15px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-group.MYEXAMPLEAPPruzcv2wa66has-feedback span { display: block!important; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66form-control-feedback.MYEXAMPLEAPPruzcv2wa66left {border-right: 1px solid #ccc; left: 13px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66emailicon{margin-top: 8px;color: #73879C; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66checkemailtext{display: none; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66button1x{display: inline-block; padding: 6px 12px; margin-bottom: 0; font-size: 14px; font-weight: 400; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; background-image: none; border: 1px solid transparent; border-radius: 4px; }", 0);
+
+	 
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66submitbtn{color: #fff; background-color: #337ab7; border-color: #2e6da4;}", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66consentwrapper{text-align: center; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66partnersscrollbar{display: block; /*switch to none to hide*/ width: 90%; height: 100px; overflow-y: scroll; position: relative; margin: 10px auto; /*border: 2px solid #22437c !important;*/ border-radius: 7px; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66partnersscrolltable{width: 100%; z-index: 9999; text-align: left;}", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66firstpartnersscrolltabletopline{color: #73879C; width: 100%; font-size: 13px; font-weight: 500; border-bottom: 1px solid #ddd; font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66partnersscrolltabletopline{color: #73879C; width: 100%; font-size: 13px; font-weight: 500; border-bottom: 1px solid #ddd; padding-top: 10px; font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif; }", 0);
+
+	sheet.insertRule(".MYEXAMPLEAPPruzcv2wa66consentpartners{font-size: 13px; font-family: 'Helvetica Neue', 'Roboto', 'Arial', 'Droid Sans', sans-serif; font-weight: 400; color: #73879C;}", 0);
+
+	/* width */
+	sheet.insertRule("#MYEXAMPLEAPPruzcv2wa66-partnersscrolllist::-webkit-scrollbar {width: 10px; z-index: 9999; }", 0);
+
+	/* Track */
+	sheet.insertRule("#MYEXAMPLEAPPruzcv2wa66-partnersscrolllist::-webkit-scrollbar-track {/* background: #f1f1f1; */}", 0);
+	 
+	/* Handle */
+	sheet.insertRule("#MYEXAMPLEAPPruzcv2wa66-partnersscrolllist::-webkit-scrollbar-thumb {background: #73879C; border-radius: 10px; }", 0);
+
+	/* Handle on hover */
+	sheet.insertRule("#MYEXAMPLEAPPruzcv2wa66-partnersscrolllist::-webkit-scrollbar-thumb:hover {background: #555; }", 0);
+
+
+	function createmodals() {
+		var myModaldiv = document.createElement("div");
+    myModaldiv.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-data-request-modal");
+    myModaldiv.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66modal");
+
+    var ModalContent = document.createElement("div");
+    ModalContent.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66modal-content-datareq");
+
+    var ModalHeader = document.createElement("div");
+    ModalHeader.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66modal-header");
+
+    var CloseButton = document.createElement("button");
+    CloseButton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66close");
+
+		var Xspan = document.createElement("span");
+    Xspan.innerHTML = "×";
+
+    CloseButton.appendChild(Xspan);
+
+		var TitleLine = document.createElement("p");
+    TitleLine.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66modal-title");          
+    TitleLine.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-myModalLabel2");
+    TitleLine.innerHTML = "MYEXAMPLEAPP Data Center";
+
+    ModalHeader.appendChild(CloseButton);
+    ModalHeader.appendChild(TitleLine);
+    ModalContent.appendChild(ModalHeader);
+
+    var ModalBody = document.createElement("div");
+    ModalBody.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consenttext");
+
+
+		var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab1");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+    TabTitle.checked = true;
+
+		var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab1");
+		TabTitleLabel.innerHTML = "Policy";
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+		var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab4");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+		var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab4");
+		TabTitleLabel.innerHTML = "Sharing";
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+		var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab2");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+
+		var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab2");
+		TabTitleLabel.innerHTML = "Access";
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+		var TabTitle = document.createElement("input");
+    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab3");
+    TabTitle.setAttribute("type", "radio");
+    TabTitle.setAttribute("name", "tabs");
+    TabTitle.style.display = "none";
+
+
+		var TabTitleLabel = document.createElement("label");
+    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab3");
+		TabTitleLabel.innerHTML = "Removal";
+
+    ModalBody.appendChild(TabTitle);
+    ModalBody.appendChild(TabTitleLabel);
+
+    /*SECTION1*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content1");
+		
+		var p1 = document.createElement("p");
+		p1.innerHTML = "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.";
+
+		var p2 = document.createElement("p");
+		p2.innerHTML = "Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.";
+
+		TabContent.appendChild(p1);
+		TabContent.appendChild(p2);
+		ModalBody.appendChild(TabContent);
+
+
+		/*SECTION2*/
+		var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content2");
+
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
+
+    var p1 = document.createElement("p");
+		p1.innerHTML = "I would like to request a copy of my data";
+
+		TabContentWrapper.appendChild(p1);
+
+		var TabContentInputWrapper = document.createElement("div");
+    TabContentInputWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66has-feedback");
+
+    var emailInput =  document.createElement("input");
+    emailInput.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-emailaddress");
+		emailInput.setAttribute("type", "email");
+		emailInput.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control MYEXAMPLEAPPruzcv2wa66has-feedback-left");
+		emailInput.placeholder = "Enter registration email address";
+
+    var emailSpan = document.createElement("span");
+    emailSpan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control-feedback MYEXAMPLEAPPruzcv2wa66left");
+
+    var emailIcon = document.createElement("i");
+    emailIcon.setAttribute("class", "fa fa-envelope MYEXAMPLEAPPruzcv2wa66emailicon");
+
+    emailSpan.appendChild(emailIcon);
+    TabContentInputWrapper.appendChild(emailInput);
+    TabContentInputWrapper.appendChild(emailSpan);
+    TabContentWrapper.appendChild(TabContentInputWrapper);
+
+    var CheckEmailWrapper = document.createElement("div");
+    CheckEmailWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66checkemailtext");
+    CheckEmailWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-checkemail-id");
+
+    var CheckEmailText = document.createElement("p");
+    CheckEmailText.innerHTML = "We have sent a message to your email address. Please check your inbox (and your spam folder).";
+
+    CheckEmailWrapper.appendChild(CheckEmailText);
+
+    var SubmitButtonWrapper = document.createElement("div");
+    SubmitButtonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentwrapper");
+
+    var SubmitButton = document.createElement("button");
+    SubmitButton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66button1x MYEXAMPLEAPPruzcv2wa66submitbtn");
+    SubmitButton.setAttribute("type", "button");
+    SubmitButton.innerHTML = "Submit Request";
+
+    SubmitButtonWrapper.appendChild(SubmitButton);
+
+    TabContent.appendChild(TabContentWrapper);
+    TabContent.appendChild(CheckEmailWrapper);
+    TabContent.appendChild(SubmitButtonWrapper);
+    ModalBody.appendChild(TabContent);
+
+
+    /*SECTION3*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content3");
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
+
+    var p1 = document.createElement("p");
+		p1.innerHTML = "I would like to request the removal of my data";
+
+		TabContentWrapper.appendChild(p1);
+
+		var TabContentInputWrapper = document.createElement("div");
+    TabContentInputWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66has-feedback");
+
+    var emailInput =  document.createElement("input");
+    emailInput.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-emailaddress");
+		emailInput.setAttribute("type", "email");
+		emailInput.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control MYEXAMPLEAPPruzcv2wa66has-feedback-left");
+		emailInput.placeholder = "Enter registration email address";
+
+    var emailSpan = document.createElement("span");
+    emailSpan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control-feedback MYEXAMPLEAPPruzcv2wa66left");
+
+    var emailIcon = document.createElement("i");
+    emailIcon.setAttribute("class", "fa fa-envelope MYEXAMPLEAPPruzcv2wa66emailicon");
+
+    emailSpan.appendChild(emailIcon);
+    TabContentInputWrapper.appendChild(emailInput);
+    TabContentInputWrapper.appendChild(emailSpan);
+    TabContentWrapper.appendChild(TabContentInputWrapper);
+
+    var CheckEmailWrapper = document.createElement("div");
+    CheckEmailWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66checkemailtext");
+    CheckEmailWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-checkemail-id");
+
+    var CheckEmailText = document.createElement("p");
+    CheckEmailText.innerHTML = "We have sent a message to your email address. Please check your inbox (and your spam folder).";
+
+    CheckEmailWrapper.appendChild(CheckEmailText);
+
+    var SubmitButtonWrapper = document.createElement("div");
+    SubmitButtonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentwrapper");
+
+    var SubmitButton = document.createElement("button");
+    SubmitButton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66button1x MYEXAMPLEAPPruzcv2wa66submitbtn");
+    SubmitButton.setAttribute("type", "button");
+    SubmitButton.innerHTML = "Submit Request";
+
+    SubmitButtonWrapper.appendChild(SubmitButton);
+
+    TabContent.appendChild(TabContentWrapper);
+    TabContent.appendChild(CheckEmailWrapper);
+    TabContent.appendChild(SubmitButtonWrapper);
+    ModalBody.appendChild(TabContent);
+
+
+    /*SECTION 4*/
+    var TabContent = document.createElement("section");
+    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content4");
+
+    var TabContentWrapper = document.createElement("div");
+    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
+
+    var PartnersWrapper = document.createElement("div");
+    PartnersWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrollbar");
+    PartnersWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-partnersscrolllist");
+
+    var PartnersTable = document.createElement("table");
+    PartnersTable.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrolltable");
+
+    var rowTitle1 =  document.createElement("tr");
+    var cellTitle1 = document.createElement("td");
+    cellTitle1.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66firstpartnersscrolltabletopline");
+    cellTitle1.colSpan = "2";
+    cellTitle1.innerHTML = "Viewing Partners";
+
+    rowTitle1.appendChild(cellTitle1);
+    PartnersTable.appendChild(rowTitle1);
+
+    /* START Django Loop*/
+    var rowContent1 =  document.createElement("tr");
+    var cellContent1 = document.createElement("td");
+    var cellContent1Inner = document.createElement("div");
+    cellContent1Inner.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentpartners");
+    cellContent1Inner.colSpan = "2";
+    cellContent1Inner.innerHTML = "Shopify";
+
+    cellContent1.appendChild(cellContent1Inner)
+    rowContent1.appendChild(cellContent1);
+    PartnersTable.appendChild(rowContent1);
+		/* END Django Loop*/
+
+
+    var rowTitle2 =  document.createElement("tr");
+    var cellTitle2 = document.createElement("td");
+    cellTitle2.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrolltabletopline");
+    cellTitle2.colSpan = "2";
+    cellTitle2.innerHTML = "Viewing Partners";
+
+    rowTitle2.appendChild(cellTitle2);
+    PartnersTable.appendChild(rowTitle2);
+
+    /* START Django Loop*/
+    var rowContent2 =  document.createElement("tr");
+    var cellContent2 = document.createElement("td");
+    var cellContent2Inner = document.createElement("div");
+    cellContent2Inner.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentpartners");
+    cellContent2Inner.colSpan = "2";
+    cellContent2Inner.innerHTML = "Shopify";
+
+    cellContent2.appendChild(cellContent2Inner)
+    rowContent2.appendChild(cellContent2);
+    PartnersTable.appendChild(rowContent2);
+    /* End Django Loop*/
+
+		PartnersWrapper.appendChild(PartnersTable);
+		TabContentWrapper.appendChild(PartnersWrapper);
+		TabContent.appendChild(TabContentWrapper);
+		ModalBody.appendChild(TabContent);
+		ModalContent.appendChild(ModalBody);
+
+
+		myModaldiv.appendChild(ModalContent);
+
+		document.body.appendChild(myModaldiv);
+
+		/* MYEXAMPLEAPP Removal Link Button */
+	  var MYEXAMPLEAPPremovalbuttonWrapper = document.createElement("div");
+	  MYEXAMPLEAPPremovalbuttonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovewrapper");
+
+		var MYEXAMPLEAPPremovalbutton = document.createElement("button");
+	  MYEXAMPLEAPPremovalbutton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebtn");
+	  MYEXAMPLEAPPremovalbutton.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-MYEXAMPLEAPPremove");
+
+	  var MYEXAMPLEAPPicon = document.createElement("i");
+	  MYEXAMPLEAPPicon.setAttribute("class", "fa fa-shield MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebuttonlogo");
+
+	  MYEXAMPLEAPPremovalbutton.appendChild(MYEXAMPLEAPPicon);
+
+	  var tooltipspan = document.createElement("span");
+	  tooltipspan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66tooltiptext");
+	  tooltipspan.innerHTML = '<i class="fa fa-info-circle MYEXAMPLEAPPruzcv2wa66infoicon"></i>MYEXAMPLEAPP Data Policy';
+
+	  MYEXAMPLEAPPremovalbuttonWrapper.appendChild(MYEXAMPLEAPPremovalbutton);
+	  MYEXAMPLEAPPremovalbuttonWrapper.appendChild(tooltipspan);
+
+	  document.body.appendChild(MYEXAMPLEAPPremovalbuttonWrapper);
+
+	}
+
+	window.onload = function() {
+		createmodals();
+	}
+
+
+	</script>
+	
+
+
+
+
+
+
+
+
+</body>
+</html>

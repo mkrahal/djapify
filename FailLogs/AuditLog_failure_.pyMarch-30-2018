@@ -1,0 +1,1 @@
+CREATE TABLE tesddevstore_myshopify_com (event_id VARCHAR(500), date  DATETIME, action VARCHAR(300) DEFAULT '-', method VARCHAR(300) DEFAULT '-', referringpage VARCHAR(300) DEFAULT '-', comment VARCHAR(300) DEFAULT '-');
