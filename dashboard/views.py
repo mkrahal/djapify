@@ -7,19 +7,10 @@ from django.conf import settings
 from installer.models import ShopDeatz
 from django.http import HttpResponseForbidden, HttpResponseBadRequest, HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
-from .models import ShopCustomizations, TemplateDefaults, ShopSettings, ShopMarketingServices, ESPCredentials, AdvancedSettings
+from .models import ModalCustomizations
 import requests  #requets with an 'S' at the end is the requests lib used to make http requests don't confuse with ur request parameter 
-from backendmodules.auditlogger import DataEventLogger 
 import datetime
 import os
-import csv
-from io import BytesIO
-from xhtml2pdf import pisa
-from gdpr.models import RemovalQueue
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-import hashlib, base64, hmac, json
-from django.http import QueryDict
-
 
 # ############################################################################################################################################
 # #  Support Functions
@@ -41,7 +32,6 @@ def construct_shop_url():
 
 @csrf_protect
 def index(request):
-
     ###########################################################################################################
     # Shop Request Validation and Authentication
     #########################################################################################################
@@ -138,15 +128,10 @@ def index(request):
     session = shopify.Session(shop_url, ShopDeatzInst.auth_token)
     shopify.ShopifyResource.activate_session(session)
 
-
-
-
-
-
     ##########################################################################################################
     # View Code
     #########################################################################################################
-
+    print "hhere"
     # At this point you can emit API calls directly without having to 'activate your session' because once the app is installed,
     # session activation is automatically done by the middleware
 
@@ -174,6 +159,7 @@ def index(request):
                    'time_delay': ShopCustInst.time_delay,
                    'page_title': 'Customize Privacy Center',
                   }
+
 
         return render(request, 'dashboard/custpop.html', context)
 
@@ -228,6 +214,7 @@ def index(request):
                 'page_title': 'Customize Privacy Center',
               }
 
+    print "there"
     return render(request, 'dashboard/custpop.html', context)
 
 

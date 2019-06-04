@@ -29,7 +29,8 @@ SECRET_KEY = 'f(5cirpvinm))-e&x!(g89auq*b&abl_ks&p_^y^#tojl53!yb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['cdn1.gdprinsider.ovh', '217.182.129.166']
+# Add both your app domain name and app server IP
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -52,7 +53,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'installer.middleware.LoginProtectionMiddleware',     # Added 'context_processor' located in the 'installer' directory
+    #'installer.middleware.LoginProtection',     # Added 'context_processor' located in the 'installer' directory
     'installer.middleware.corsMiddleware',      # Added the 'CORS middleware' located in the 'installer' directory
 ]
 
