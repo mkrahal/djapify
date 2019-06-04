@@ -30,6 +30,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Rabbit-mq
 * Supervisor
 * For a complete list of required python libraries see [requirement.txt]()
+* App must be hosted on a webserver with a valid SSL certificate (must use https protocol)
 
 ### Installing
 
