@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:400,500" rel="stylesheet">
-</head>
-<body>
-	<!-- Start Modal HTML Code--> 
-	<h1>Basic Modal</h1>
-
-
-	<script type="text/javascript">
-		/* The Modal (background) */
-
 		// Create a New StyleSheet 
 	  var sheet = (function() {
 	    // Create the <style> tag
@@ -164,7 +149,7 @@
 		var TitleLine = document.createElement("p");
     TitleLine.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66modal-title");          
     TitleLine.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-myModalLabel2");
-    TitleLine.innerHTML = "MYEXAMPLEAPP Data Center";
+    TitleLine.innerHTML = "Example App Pop-Up";
 
     ModalHeader.appendChild(CloseButton);
     ModalHeader.appendChild(TitleLine);
@@ -183,271 +168,27 @@
 
 		var TabTitleLabel = document.createElement("label");
     TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab1");
-		TabTitleLabel.innerHTML = "Policy";
+		TabTitleLabel.innerHTML = "";
+		TabTitleLabel.style.display = "none"; 
 
     ModalBody.appendChild(TabTitle);
     ModalBody.appendChild(TabTitleLabel);
 
-		var TabTitle = document.createElement("input");
-    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab4");
-    TabTitle.setAttribute("type", "radio");
-    TabTitle.setAttribute("name", "tabs");
-    TabTitle.style.display = "none";
-
-		var TabTitleLabel = document.createElement("label");
-    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab4");
-		TabTitleLabel.innerHTML = "Sharing";
-
-    ModalBody.appendChild(TabTitle);
-    ModalBody.appendChild(TabTitleLabel);
-
-		var TabTitle = document.createElement("input");
-    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab2");
-    TabTitle.setAttribute("type", "radio");
-    TabTitle.setAttribute("name", "tabs");
-    TabTitle.style.display = "none";
-
-
-		var TabTitleLabel = document.createElement("label");
-    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab2");
-		TabTitleLabel.innerHTML = "Access";
-
-    ModalBody.appendChild(TabTitle);
-    ModalBody.appendChild(TabTitleLabel);
-
-		var TabTitle = document.createElement("input");
-    TabTitle.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-tab3");
-    TabTitle.setAttribute("type", "radio");
-    TabTitle.setAttribute("name", "tabs");
-    TabTitle.style.display = "none";
-
-
-		var TabTitleLabel = document.createElement("label");
-    TabTitleLabel.setAttribute("for", "MYEXAMPLEAPPruzcv2wa66-tab3");
-		TabTitleLabel.innerHTML = "Removal";
-
-    ModalBody.appendChild(TabTitle);
-    ModalBody.appendChild(TabTitleLabel);
+		
 
     /*SECTION1*/
     var TabContent = document.createElement("section");
     TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content1");
 		
 		var p1 = document.createElement("p");
-		p1.innerHTML = "Bacon ipsum dolor sit amet beef venison beef ribs kielbasa. Sausage pig leberkas, t-bone sirloin shoulder bresaola. Frankfurter rump porchetta ham. Pork belly prosciutto brisket meatloaf short ribs.";
-
-		var p2 = document.createElement("p");
-		p2.innerHTML = "Brisket meatball turkey short loin boudin leberkas meatloaf chuck andouille pork loin pastrami spare ribs pancetta rump. Frankfurter corned beef beef tenderloin short loin meatloaf swine ground round venison.";
+		p1.innerHTML = "This is an example of storefront manipulation using scripttag JavaScript injection. When the store home page is loaded, the that were registered on app install send a request to the app webserver, which then returns a piece of JavaScript code, this code is executed on load allowing app developers to inject HTML, CSS, and JS in order to directly modify the way the storefront appears/behaves (such as creating this pop-up modal and message.)";
 
 		TabContent.appendChild(p1);
-		TabContent.appendChild(p2);
-		ModalBody.appendChild(TabContent);
-
-
-		/*SECTION2*/
-		var TabContent = document.createElement("section");
-    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content2");
-
-    var TabContentWrapper = document.createElement("div");
-    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
-
-    var p1 = document.createElement("p");
-		p1.innerHTML = "I would like to request a copy of my data";
-
-		TabContentWrapper.appendChild(p1);
-
-		var TabContentInputWrapper = document.createElement("div");
-    TabContentInputWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66has-feedback");
-
-    var emailInput =  document.createElement("input");
-    emailInput.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-emailaddress");
-		emailInput.setAttribute("type", "email");
-		emailInput.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control MYEXAMPLEAPPruzcv2wa66has-feedback-left");
-		emailInput.placeholder = "Enter registration email address";
-
-    var emailSpan = document.createElement("span");
-    emailSpan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control-feedback MYEXAMPLEAPPruzcv2wa66left");
-
-    var emailIcon = document.createElement("i");
-    emailIcon.setAttribute("class", "fa fa-envelope MYEXAMPLEAPPruzcv2wa66emailicon");
-
-    emailSpan.appendChild(emailIcon);
-    TabContentInputWrapper.appendChild(emailInput);
-    TabContentInputWrapper.appendChild(emailSpan);
-    TabContentWrapper.appendChild(TabContentInputWrapper);
-
-    var CheckEmailWrapper = document.createElement("div");
-    CheckEmailWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66checkemailtext");
-    CheckEmailWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-checkemail-id");
-
-    var CheckEmailText = document.createElement("p");
-    CheckEmailText.innerHTML = "We have sent a message to your email address. Please check your inbox (and your spam folder).";
-
-    CheckEmailWrapper.appendChild(CheckEmailText);
-
-    var SubmitButtonWrapper = document.createElement("div");
-    SubmitButtonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentwrapper");
-
-    var SubmitButton = document.createElement("button");
-    SubmitButton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66button1x MYEXAMPLEAPPruzcv2wa66submitbtn");
-    SubmitButton.setAttribute("type", "button");
-    SubmitButton.innerHTML = "Submit Request";
-
-    SubmitButtonWrapper.appendChild(SubmitButton);
-
-    TabContent.appendChild(TabContentWrapper);
-    TabContent.appendChild(CheckEmailWrapper);
-    TabContent.appendChild(SubmitButtonWrapper);
-    ModalBody.appendChild(TabContent);
-
-
-    /*SECTION3*/
-    var TabContent = document.createElement("section");
-    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content3");
-    var TabContentWrapper = document.createElement("div");
-    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
-
-    var p1 = document.createElement("p");
-		p1.innerHTML = "I would like to request the removal of my data";
-
-		TabContentWrapper.appendChild(p1);
-
-		var TabContentInputWrapper = document.createElement("div");
-    TabContentInputWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66has-feedback");
-
-    var emailInput =  document.createElement("input");
-    emailInput.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-emailaddress");
-		emailInput.setAttribute("type", "email");
-		emailInput.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control MYEXAMPLEAPPruzcv2wa66has-feedback-left");
-		emailInput.placeholder = "Enter registration email address";
-
-    var emailSpan = document.createElement("span");
-    emailSpan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66form-control-feedback MYEXAMPLEAPPruzcv2wa66left");
-
-    var emailIcon = document.createElement("i");
-    emailIcon.setAttribute("class", "fa fa-envelope MYEXAMPLEAPPruzcv2wa66emailicon");
-
-    emailSpan.appendChild(emailIcon);
-    TabContentInputWrapper.appendChild(emailInput);
-    TabContentInputWrapper.appendChild(emailSpan);
-    TabContentWrapper.appendChild(TabContentInputWrapper);
-
-    var CheckEmailWrapper = document.createElement("div");
-    CheckEmailWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66checkemailtext");
-    CheckEmailWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-checkemail-id");
-
-    var CheckEmailText = document.createElement("p");
-    CheckEmailText.innerHTML = "We have sent a message to your email address. Please check your inbox (and your spam folder).";
-
-    CheckEmailWrapper.appendChild(CheckEmailText);
-
-    var SubmitButtonWrapper = document.createElement("div");
-    SubmitButtonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentwrapper");
-
-    var SubmitButton = document.createElement("button");
-    SubmitButton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66button1x MYEXAMPLEAPPruzcv2wa66submitbtn");
-    SubmitButton.setAttribute("type", "button");
-    SubmitButton.innerHTML = "Submit Request";
-
-    SubmitButtonWrapper.appendChild(SubmitButton);
-
-    TabContent.appendChild(TabContentWrapper);
-    TabContent.appendChild(CheckEmailWrapper);
-    TabContent.appendChild(SubmitButtonWrapper);
-    ModalBody.appendChild(TabContent);
-
-
-    /*SECTION 4*/
-    var TabContent = document.createElement("section");
-    TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content4");
-
-    var TabContentWrapper = document.createElement("div");
-    TabContentWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66requesttext");
-
-    var PartnersWrapper = document.createElement("div");
-    PartnersWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrollbar");
-    PartnersWrapper.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-partnersscrolllist");
-
-    var PartnersTable = document.createElement("table");
-    PartnersTable.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrolltable");
-
-    var rowTitle1 =  document.createElement("tr");
-    var cellTitle1 = document.createElement("td");
-    cellTitle1.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66firstpartnersscrolltabletopline");
-    cellTitle1.colSpan = "2";
-    cellTitle1.innerHTML = "Viewing Partners";
-
-    rowTitle1.appendChild(cellTitle1);
-    PartnersTable.appendChild(rowTitle1);
-
-    /* START Django Loop*/
-    var rowContent1 =  document.createElement("tr");
-    var cellContent1 = document.createElement("td");
-    var cellContent1Inner = document.createElement("div");
-    cellContent1Inner.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentpartners");
-    cellContent1Inner.colSpan = "2";
-    cellContent1Inner.innerHTML = "Shopify";
-
-    cellContent1.appendChild(cellContent1Inner)
-    rowContent1.appendChild(cellContent1);
-    PartnersTable.appendChild(rowContent1);
-		/* END Django Loop*/
-
-
-    var rowTitle2 =  document.createElement("tr");
-    var cellTitle2 = document.createElement("td");
-    cellTitle2.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66partnersscrolltabletopline");
-    cellTitle2.colSpan = "2";
-    cellTitle2.innerHTML = "Viewing Partners";
-
-    rowTitle2.appendChild(cellTitle2);
-    PartnersTable.appendChild(rowTitle2);
-
-    /* START Django Loop*/
-    var rowContent2 =  document.createElement("tr");
-    var cellContent2 = document.createElement("td");
-    var cellContent2Inner = document.createElement("div");
-    cellContent2Inner.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66consentpartners");
-    cellContent2Inner.colSpan = "2";
-    cellContent2Inner.innerHTML = "Shopify";
-
-    cellContent2.appendChild(cellContent2Inner)
-    rowContent2.appendChild(cellContent2);
-    PartnersTable.appendChild(rowContent2);
-    /* End Django Loop*/
-
-		PartnersWrapper.appendChild(PartnersTable);
-		TabContentWrapper.appendChild(PartnersWrapper);
-		TabContent.appendChild(TabContentWrapper);
 		ModalBody.appendChild(TabContent);
 		ModalContent.appendChild(ModalBody);
-
-
 		myModaldiv.appendChild(ModalContent);
 
 		document.body.appendChild(myModaldiv);
-
-		/* MYEXAMPLEAPP Removal Link Button */
-	  var MYEXAMPLEAPPremovalbuttonWrapper = document.createElement("div");
-	  MYEXAMPLEAPPremovalbuttonWrapper.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovewrapper");
-
-		var MYEXAMPLEAPPremovalbutton = document.createElement("button");
-	  MYEXAMPLEAPPremovalbutton.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebtn");
-	  MYEXAMPLEAPPremovalbutton.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-MYEXAMPLEAPPremove");
-
-	  var MYEXAMPLEAPPicon = document.createElement("i");
-	  MYEXAMPLEAPPicon.setAttribute("class", "fa fa-shield MYEXAMPLEAPPruzcv2wa66MYEXAMPLEAPPremovebuttonlogo");
-
-	  MYEXAMPLEAPPremovalbutton.appendChild(MYEXAMPLEAPPicon);
-
-	  var tooltipspan = document.createElement("span");
-	  tooltipspan.setAttribute("class", "MYEXAMPLEAPPruzcv2wa66tooltiptext");
-	  tooltipspan.innerHTML = '<i class="fa fa-info-circle MYEXAMPLEAPPruzcv2wa66infoicon"></i>MYEXAMPLEAPP Data Policy';
-
-	  MYEXAMPLEAPPremovalbuttonWrapper.appendChild(MYEXAMPLEAPPremovalbutton);
-	  MYEXAMPLEAPPremovalbuttonWrapper.appendChild(tooltipspan);
-
-	  document.body.appendChild(MYEXAMPLEAPPremovalbuttonWrapper);
 
 	}
 
@@ -455,16 +196,3 @@
 		createmodals();
 	}
 
-
-	</script>
-	
-
-
-
-
-
-
-
-
-</body>
-</html>
