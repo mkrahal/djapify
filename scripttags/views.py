@@ -11,7 +11,7 @@ from dashboard.models import ModalCustomizations
 
 # This view is to returns the ScriptTag's source JS when it is requested by the store. 
 # The returned source JS then injects HTML into the store front code.
-def scripttagsrc1(request): 
+def scripttagsrc(request): 
     print 'scriptsrc.views()'
 
     # Get the name of the current shop
@@ -50,15 +50,7 @@ def scripttagsrc1(request):
     time_delay_millisec = ModalCustomSettingsINSTANCE.time_delay * 1000      
 
     context = {
-               'background_color': ModalCustomSettingsINSTANCE.background_color,
-               'text_color': ModalCustomSettingsINSTANCE.text_color,
-               'secondary_text_color': ModalCustomSettingsINSTANCE.secondary_text_color,
-               'active_tab_text_color': ModalCustomSettingsINSTANCE.active_tab_text_color,
-               'accept_color': ModalCustomSettingsINSTANCE.accept_color,
-               'decline_color': ModalCustomSettingsINSTANCE.decline_color,
-               'font_size': ModalCustomSettingsINSTANCE.font_size,
-               'behaviour': ModalCustomSettingsINSTANCE.widget_behaviour,
-               'time_delay': time_delay_millisec,
+               'popup_message': ModalCustomSettingsINSTANCE.popup_message,
                'shop_url': shop_url,
               }
 

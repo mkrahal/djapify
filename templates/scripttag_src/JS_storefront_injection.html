@@ -181,7 +181,7 @@
     TabContent.setAttribute("id", "MYEXAMPLEAPPruzcv2wa66-content1");
 		
 		var p1 = document.createElement("p");
-		p1.innerHTML = "This is an example of storefront manipulation using scripttag JavaScript injection. When the store home page is loaded, the that were registered on app install send a request to the app webserver, which then returns a piece of JavaScript code, this code is executed on load allowing app developers to inject HTML, CSS, and JS in order to directly modify the way the storefront appears/behaves (such as creating this pop-up modal and message.)";
+        p1.innerHTML = "{{ popup_message  }}";
 
 		TabContent.appendChild(p1);
 		ModalBody.appendChild(TabContent);

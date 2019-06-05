@@ -3,7 +3,7 @@ from django.contrib import admin
 
 from installer.views import login, authenticate, finalize, logout, webhook, activateRecurringCharge
 from dashboard.views import index
-from scripttags.views import scripttagsrc1
+from scripttags.views import scripttagsrc
 
 urlpatterns = [
                 #url(r'admin/', admin.site.urls),
@@ -17,9 +17,9 @@ urlpatterns = [
                 url(r'^activatecharge/$', activateRecurringCharge, name='activate_charge'),
 
                 # Dashboard
-                url(r'^home/$', index, name='root_path'),
+                url(r'^$', index, name='root_path'),
 
                 # Script Tags
-                url(r'^scriptsrc1/$', scripttagsrc1, name='first_script_tag'),
+                url(r'^scriptsrc/$', scripttagsrc, name='first_script_tag'),
                 
               ]

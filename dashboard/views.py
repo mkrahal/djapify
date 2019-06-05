@@ -1,16 +1,11 @@
 from django.shortcuts import render, redirect
 import shopify
-from django.template.loader import get_template 
 from django.views.decorators.csrf import csrf_protect
-from installer.decorators import shop_login_required
 from django.conf import settings
 from installer.models import ShopDeatz
-from django.http import HttpResponseForbidden, HttpResponseBadRequest, HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
 from .models import ModalCustomizations
-import requests  #requets with an 'S' at the end is the requests lib used to make http requests don't confuse with ur request parameter 
-import datetime
-import os
+import hmac
 
 # ############################################################################################################################################
 # #  Support Functions
@@ -32,6 +27,7 @@ def construct_shop_url():
 
 @csrf_protect
 def index(request):
+
     ###########################################################################################################
     # Shop Request Validation and Authentication
     #########################################################################################################
@@ -137,30 +133,20 @@ def index(request):
 
     # If this is a page request and not a <POST> then 'submitted' key will not be present in request.POST, 
     # in this case just get current styles from DB and render the requested page
+
     if 'submitted' not in request.POST:
+        
         # Get current styes from DB and render them in context
-        ShopCustInst = ShopCustomizations.objects.get(shop_url=shop_url)
-        # Create variables for button focus when rendering template
-        template_focus  = 'template_' + str(ShopCustInst.active_template).lower()
-        font_focus  = 'font_' + str(ShopCustInst.font_type).lower()
+        ModalCustInst = ModalCustomizations.objects.get(shop_url=shop_url)
+        
         context = {
                    'SHOPIFY_API_KEY': settings.SHOPIFY_API_KEY,
                    'full_shop_url': construct_shop_url,
-                   'active_customize': 'ui-tertiary-navigation__link--is-active',
-                   'background_color': ShopCustInst.background_color,
-                   'text_color': ShopCustInst.text_color,
-                   'secondary_text_color': ShopCustInst.secondary_text_color,
-                   'active_tab_text_color': ShopCustInst.active_tab_text_color,
-                   'accept_color': ShopCustInst.accept_color,
-                   'decline_color': ShopCustInst.decline_color,
-                   'font_type': ShopCustInst.font_type,
-                   'font_focus': font_focus,
-                   'behaviour': ShopCustInst.widget_behaviour,
-                   'time_delay': ShopCustInst.time_delay,
-                   'page_title': 'Customize Privacy Center',
+                   'popup_message': ModalCustInst.popup_message,
+                   'page_title': 'Customize Pop-Up Modal',
                   }
 
-
+    
         return render(request, 'dashboard/custpop.html', context)
 
     # Otherwise, this means the user is posting data (clicked the save button on dashboard), so continue with code execution to preocess data
@@ -168,53 +154,21 @@ def index(request):
         pass
 
     # Capture Posted Data
-    background_color = request.POST['hex-background-color']
-    text_color = request.POST['hex-text-color']
-    secondary_text_color = request.POST['hex-secondary-text-color']
-    active_tab_text_color = request.POST['active-tab-text-color']
-    accept_color = request.POST['hex-accept-color']
-    decline_color = request.POST['hex-decline-color']
-    font_type = request.POST['fonttype']
-    time_delay = request.POST['time-delay']
-    reset_flag = request.POST['reset-flag']
-    behaviour = request.POST['iCheck']
-
+    popup_message = request.POST['popup-message']
 
     # Write data to DB
-    ShopCustInst = ShopCustomizations.objects.get(shop_url=shop_url)
-    ShopCustInst.background_color = background_color
-    ShopCustInst.text_color = text_color
-    ShopCustInst.secondary_text_color = secondary_text_color
-    ShopCustInst.active_tab_text_color = active_tab_text_color
-    ShopCustInst.accept_color = accept_color
-    ShopCustInst.decline_color = decline_color
-    ShopCustInst.font_type = font_type
-    ShopCustInst.widget_behaviour = behaviour
-    ShopCustInst.time_delay = int(time_delay)
-    ShopCustInst.save()
+    ModalCustInst = ShopCustomizations.objects.get(shop_url=shop_url)
+    ModalCustInst.popup_message = popup_message
+    ModalCustInst.save()
 
-    # Get Current settings for font to pass for rendering
-    font_focus  = 'font_' + str(ShopCustInst.font_type).lower()
-
-    # Put new customizations into context and re-load customizepop.html with new values
+    # Pass new customizations into context and re-load customizepop.html with new values
     context = {
                 'SHOPIFY_API_KEY': settings.SHOPIFY_API_KEY,
                 'full_shop_url': construct_shop_url,
-                'active_customize': 'ui-tertiary-navigation__link--is-active',
-                'background_color': background_color,
-                'text_color': text_color,
-                'accept_color': accept_color,
-                'secondary_text_color': secondary_text_color,
-                'active_tab_text_color': active_tab_text_color,
-                'decline_color': decline_color,
-                'font_type': font_type,
-                'font_focus': font_focus,
-                'behaviour': behaviour,
-                'time_delay': time_delay,
-                'page_title': 'Customize Privacy Center',
+                'popup_message': ModalCustInst.popup_message,
+                'page_title': 'Customize Pop-Up Modal',       
               }
 
-    print "there"
     return render(request, 'dashboard/custpop.html', context)
 
 

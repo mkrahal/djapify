@@ -5,7 +5,7 @@ from django.conf import settings
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseForbidden, HttpResponse
 from django.core.exceptions import ObjectDoesNotExist
-from dashboard.models import TemplateDefaults, ModalCustomizations
+from dashboard.models import ModalCustomizations
 from installer.models import ShopDeatz, InstallTracker
 import hashlib, base64, hmac, json, datetime, dashboard, shopify, string, random
 
@@ -122,23 +122,14 @@ def activateRecurringCharge(request):
             print 'Install written in models.InstallTracker'
 
         # Create Customization Model entry for shop
+        # if an entry for the store exists then do not do anything
         try:
             ModalCustomInst =  ModalCustomizations.objects.get(shop_url=shop_url)
 
+        # otherwise if no entry exists then create one 
         except ObjectDoesNotExist:
-            DefaultTemplateInst = TemplateDefaults.objects.get(template_name='retro')
             ModalCustInst = ModalCustomizations()
             ModalCustInst.shop_url = shop_url
-            ModalCustInst.active_template = DefaultTemplateInst.template_name
-            ModalCustInst.background_color = DefaultTemplateInst.background_color
-            ModalCustInst.text_color = DefaultTemplateInst.text_color
-            ModalCustInst.secondary_text_color = DefaultTemplateInst.secondary_text_color
-            ModalCustInst.active_tab_text_color = DefaultTemplateInst.active_tab_text_color
-            ModalCustInst.accept_color = DefaultTemplateInst.accept_color
-            ModalCustInst.decline_color = DefaultTemplateInst.decline_color
-            ModalCustInst.font_type = DefaultTemplateInst.font_type
-            ModalCustInst.font_size = DefaultTemplateInst.font_size
-            ModalCustInst.time_delay = DefaultTemplateInst.time_delay
             ModalCustInst.save()
 
         
@@ -170,7 +161,7 @@ def createScriptTag():
     print '==> createScriptTag()'
     scripttag = shopify.ScriptTag()
     scripttag.event = 'onload'
-    scripttag.src = settings.APP_DOMAINURL + '/scriptsrc1/'
+    scripttag.src = settings.APP_DOMAINURL + '/scriptsrc/'
     scripttag.save()
     return scripttag
 
