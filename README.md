@@ -70,23 +70,17 @@ These instructions will get you a copy of the project up and running on your loc
 	$ python manage.py makemigrations
 	$ python manage.py migrate 
 	```
-9. Run fixtures to load data
-	```
-	$ python manage.py loaddata dashboard/fixtures/default_styles_fixture.json
-	```
-
-10. Start all services and run app
+9. Start services and run app
 	```
 	$ sudo supervisorctl restart shopify_scaffolding_beat
 	$ sudo supervisorctl restart shopify_scaffolding
 	$ sudo systemctl start rabbitmq-server
 	$ python manage.py runserver
 	```
-	*Note: Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
-
+	
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+*Note: DO NOT USE DJANGO DEVELOPMENT WEB SERVER IN A PRODUCTION SETTING. Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
 
 ## Built With
 
@@ -96,7 +90,7 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Built With
