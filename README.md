@@ -15,7 +15,7 @@ Pre-coded Features:
 -  Request permissions for application scope
 -  HMAC validation (create and manage sessions using HMAC validation)
 -  Gracefully fallback when user declines recurring charge
--  Celery task to periodically check if recurring charge is still active (if not store is deleted from app server "Registered Store" Database and     app service is no longer provided)
+-  Celery task to periodically check if recurring charge is still active (if recurring charge has been cancelled then the store will be deleted from app server "Registered Store" Database and app service will no longer provided)
 
 
 
@@ -29,7 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Django
 * Rabbit-mq
 * Supervisor
-* For a complete list of required python libraries see [requirement.txt]()
+* For a complete list of required python libraries see [requirement.txt](https://github.com/mkrahal/djapify/extras/requirements.txt)
 * App must be hosted on a webserver with a valid SSL certificate (must use https protocol)
 
 ### Installing
@@ -80,7 +80,8 @@ These instructions will get you a copy of the project up and running on your loc
 	
 ## Deployment
 
-*Note: DO NOT USE DJANGO DEVELOPMENT WEB SERVER IN A PRODUCTION SETTING. Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).*
+DO NOT USE DJANGO DEVELOPMENT WEB SERVER IN A PRODUCTION SETTING. 
+Production server should be run using a webserver / python engine combination (such as APACHE + wsgi).
 
 ## Built With
 
@@ -90,7 +91,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Contributing
 
-Please read [CONTRIBUTING.md]() for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/mkrahal/djapify/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Built With
@@ -101,15 +102,7 @@ Please read [CONTRIBUTING.md]() for details on our code of conduct, and the proc
 
 * **MK RAHAL** - *Initial work* - [MK RAHAL](https://github.com/mkrahal)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mkrahal/djapify/LICENSE.md) file for details
 
