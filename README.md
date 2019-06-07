@@ -29,7 +29,7 @@ These instructions will get you a copy of the project up and running on your loc
 * Django
 * Rabbit-mq
 * Supervisor
-* For a complete list of required python libraries see [requirement.txt](https://github.com/mkrahal/djapify/extras/requirements.txt)
+* For a complete list of required python libraries see [requirement.txt](https://github.com/mkrahal/djapify/blob/master/extras/requirements.txt)
 * App must be hosted on a webserver with a valid SSL certificate (must use https protocol)
 
 ### Installing
@@ -91,7 +91,7 @@ Production server should be run using a webserver / python engine combination (s
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/mkrahal/djapify/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/mkrahal/djapify/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 
 ## Built With
@@ -104,5 +104,5 @@ Please read [CONTRIBUTING.md](https://github.com/mkrahal/djapify/CONTRIBUTING.md
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mkrahal/djapify/LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/mkrahal/djapify/blob/master/LICENSE.md) file for details
 
